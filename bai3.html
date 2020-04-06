@@ -7,26 +7,26 @@
 <body>
     <script>
 
-        let inputValue = prompt('nhập số cần kiểm tra');
+        let Value = prompt('nhập số cần kiểm tra');
         function fibonacci(n) {
                 if(n === 0 || n === 1 || n === 2 || n ===3)
                     return n;
                 return fibonacci(n - 2) + fibonacci(n - 1);
         }
 
-        function checkFibanacci(inputValue) {
+        function checkFibonacci(inputValue) {
             let count = 0;
             for(let i = 0; i <= inputValue; i++) {
-                if(inputValue === fibonacci(i)) {
+                if(inputValue === Number(fibonacci(i))) {
                     count++;
                 }
             }
             return count;
         }
-        if(checkFibanacci(inputValue) === 1) {
-            document.write('Số nhập vào thuộc dãy fionacci');
+        if(checkFibonacci(Value) === 1) {
+            document.write('Số nhập vào thuộc dãy fibnacci');
         } else {
-            document.write('số nhập vào không thuộc dãy fibanacii');
+            document.write('số nhập vào không thuộc dãy fibonacci');
         }
 
 
