@@ -22,7 +22,7 @@
            this.getY = function () {
                return this.y;
            }
-           this.renger = function () {
+           this.render = function () {
                let canvas = document.getElementById("myCanvas");
                let context = canvas.getContext ("2d");
                context.fillStyle = this.color;
@@ -30,13 +30,11 @@
                context.arc(this.x,this.y,this.radius,0,2*Math.PI);
                context.fill();
            }
-
        }
        function start(){
            let circle1 = new Circle(10,10,10,"#000000");
-           circle1.renger();
+           circle1.render();
        }
-
    </script>
 </body>
 </html>
