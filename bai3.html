@@ -9,15 +9,16 @@
 
         let Value = prompt('nhập số cần kiểm tra');
         function fibonacci(n) {
-                if(n === 0 || n === 1 || n === 2 || n ===3)
+                if(n === 0 || n === 1 || n === 2 || n === 3) {
                     return n;
+                }
                 return fibonacci(n - 2) + fibonacci(n - 1);
         }
 
         function checkFibonacci(inputValue) {
             let count = 0;
             for(let i = 0; i <= inputValue; i++) {
-                if(inputValue === Number(fibonacci(i))) {
+                if(Number(fibonacci(i)) === inputValue) {
                     count++;
                 }
             }
