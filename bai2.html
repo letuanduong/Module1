@@ -27,9 +27,15 @@
                     return true;
                 }
             }
+            return false;
         }
         if(tryRemoveFromArray(arr, valueInput)) {
             document.write('không có phần tử nào trong mảng ban đầu ');
+            for (let i = 0; i < arr.length; i++) {
+                document.write(arr[i] + ' ');
+            }
+        } else {
+            document.write('mảng sau thay đổi:'); 
             for (let i = 0; i < arr.length; i++) {
                 document.write(arr[i] + ' ');
             }
