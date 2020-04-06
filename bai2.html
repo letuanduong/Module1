@@ -19,23 +19,20 @@
         }
         document.write('<hr>');
         function tryRemoveFromArray(arr, valueInput) {
-            let index;
             let i;
             for(i = 0; i < arr.length; i++){
                 if(arr[i] === valueInput) {
-                    index  = i;
-                    for(i = index; i < arr.length; i++) {
-                        arr[i] = arr[i+1];
-                    }
-                    arr.pop();
+                    arr.splice(i, 1);
+                } else {
+                    return true;
                 }
             }
-            return arr;
         }
-        tryRemoveFromArray(arr, valueInput);
-        //################## mảng sau khi đã remove phần tư############
-        for(let i = 0; i < arr.length; i++) {
-            document.write(arr[i] + ' ');
+        if(tryRemoveFromArray(arr, valueInput)) {
+            document.write('không có phần tử nào trong mảng ban đầu ');
+            for (let i = 0; i < arr.length; i++) {
+                document.write(arr[i] + ' ');
+            }
         }
 
 
