@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+    <script>
+        const n = 10;
+        let arr = [];
+        let valueInput = prompt('nhập số nguyên cần kiểm tra trong khoảng 0~10');
+        for(let i = 0; i < n; i++) {
+            arr[i] = Math.floor(Math.random()*10);
+        }
+        //#######################in mang###############################
+        document.write('mảng ban đầu');
+        for(let i = 0; i < arr.length; i++) {
+            document.write(arr[i] + ' ');
+        }
+        document.write('<hr>');
+        function tryRemoveFromArray(arr, valueInput) {
+            let index;
+            let i;
+            for(i = 0; i < arr.length; i++){
+                if(arr[i] === valueInput) {
+                    index  = i;
+                    for(i = index; i < arr.length; i++) {
+                        arr[i] = arr[i+1];
+                    }
+                    arr.pop();
+                }
+            }
+            return arr;
+        }
+        tryRemoveFromArray(arr, valueInput);
+        //################## mảng sau khi đã remove phần tư############
+        for(let i = 0; i < arr.length; i++) {
+            document.write(arr[i] + ' ');
+        }
+
+
+    </script>
+</body>
+</html>
