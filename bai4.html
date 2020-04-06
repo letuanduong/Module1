@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+    <body onload="start()">
+    <canvas width="500px" height="500px" id="myCanvas" style="background-color: cadetblue"></canvas>
+   <script>
+       let Circle = function (x, y, radius, color) {
+           this.x = x;
+           this.y = y;
+           this.radius = radius;
+           this.color = color;
+           this.getRadius = function () {
+               return this.radius;
+           }
+           this.getX = function () {
+               return this.x;
+           }
+           this.getY = function () {
+               return this.y;
+           }
+           this.renger = function () {
+               let canvas = document.getElementById("myCanvas");
+               let context = canvas.getContext ("2d");
+               context.fillStyle = this.color;
+               context.beginPath();
+               context.arc(this.x,this.y,this.radius,0,2*Math.PI);
+               context.fill();
+           }
+
+       }
+       function start(){
+           let circle1 = new Circle(10,10,10,"#000000");
+           circle1.renger();
+       }
+
+   </script>
+</body>
+</html>
