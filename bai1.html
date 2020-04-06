@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 1</title>
+</head>
+<body>
+    <script>
+        const n = 10;
+        let arr = [];
+        for(let i = 0; i < n; i++) {
+            arr[i] = Math.floor(Math.random()*10);
+        }
+        //###########in mang###############################
+        for(let i = 0; i < arr.length; i++) {
+            document.write(arr[i] + ' ');
+        }
+        //###############phan tu lon nhat trong mang#######
+        function findMax(arr) {
+            let max = arr[0];
+            for(let i = 1; i < arr.length; i++) {
+                if(max < arr[i]) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        document.write('<br>' +'điểm số cao nhất trong danh sách mảng là: ' +'' +findMax(arr));
+
+    </script>
+
+</body>
+</html>
