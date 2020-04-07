@@ -16,15 +16,14 @@
         }
 
         function checkFibonacci(inputValue) {
-            let count = 0;
             for(let i = 0; i <= inputValue; i++) {
                 if(Number(fibonacci(i)) === inputValue) {
-                    count++;
+                    return true;
                 }
             }
-            return count;
+            return false;
         }
-        if(checkFibonacci(Value) !== 0) {
+        if(checkFibonacci(Value)) {
             document.write('Số nhập vào thuộc dãy fibnacci');
         } else {
             document.write('số nhập vào không thuộc dãy fibonacci');
